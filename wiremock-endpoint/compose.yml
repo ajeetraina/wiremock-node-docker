@@ -1,6 +1,7 @@
 services:
   wiremock:
-    image: wiremock/wiremock
+    build: .
+    dockerfile: Dockerfile
     volumes:
       - ./__files:/home/wiremock/__files
       - ./mappings:/home/wiremock/mappings
